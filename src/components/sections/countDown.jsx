@@ -5,27 +5,27 @@ import SlotCounter from "react-slot-counter"
 const counterData = [
     {
         id: 1,
-        number: 5,
-        endPoint: "k+",
-        title: "Website Optimized"
+        number: 100,
+        endPoint: "+",
+        title: "Software designe development"
     },
     {
         id: 2,
-        number: 4.9,
-        endPoint: "k+",
-        title: "Website Optimized"
+        number: 500,
+        endPoint: "+",
+        title: "Website Optimisation"
     },
     {
         id: 3,
         number: 95,
         endPoint: "%",
-        title: "Website Optimized"
+        title: "Client Satisfaction"
     },
     {
         id: 4,
         number: 15,
         endPoint: "x",
-        title: "Website Optimized"
+        title: "Brand visibility"
     },
 
 ]

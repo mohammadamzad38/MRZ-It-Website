@@ -7,7 +7,6 @@ import { IoIosArrowDown } from "react-icons/io";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import { MdMenu } from "react-icons/md";
-import MobileExtraInfo from "./mobileExtraInfo";
 
 const MobileMenu = ({ data }) => {
   const pathName = usePathname();
@@ -176,7 +175,6 @@ const MobileMenu = ({ data }) => {
                 );
               })}
             </ul>
-            <MobileExtraInfo />
           </div>
         </SheetContent>
       </Sheet>

@@ -34,12 +34,12 @@ const SideBar = ({ search, blog }) => {
 
       <div>
         <Title size={"4xl"} className={"pb-7.5"}>Categories</Title>
-        <ul className='bg-[rgba(46,77,254,0.05)] lg:p-5 p-3 rounded-lg flex flex-col gap-[15px]'>
+        <ul className='bg-[rgba(46,77,254,0.05)] lg:p-5 p-3 rounded-lg flex flex-col gap-[10px]'>
           {
             uniqueCategorys.map((category, index) => {
               return (
                 <li key={index} className=''>
-                  <Link href={""} className={`lg:text-1xl text-lg font-semibold block bg-background rounded-lg lg:px-6 px-3 lg:pt-[18px] lg:pb-[22px] py-3 relative z-[1]  after:absolute after:z-[-1] after:left-0 after:top-0 after:w-0 hover:after:w-full after:h-full after:bg-primary after:text-white after:rounded-lg after:transition-all after:duration-500 hover:text-white transition-all duration-500 overflow-hidden ${index == 0 ? "bg-primary text-white":""}`}>
+                  <Link href={""} className={` text-lg font-semibold block bg-background rounded-lg  px-3 py-2 relative z-[1]  after:absolute after:z-[-1] after:left-0 after:top-0 after:w-0 hover:after:w-full after:h-full after:bg-primary after:text-white after:rounded-lg after:transition-all after:duration-500 hover:text-white transition-all duration-500 overflow-hidden ${index == 0 ? "bg-primary text-white":""}`}>
                     {category}
                   </Link>
                 </li>
