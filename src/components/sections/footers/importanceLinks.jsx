@@ -1,3 +1,6 @@
+"use client"
+
+
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
@@ -37,7 +40,7 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
 
         {
           id: 2,
-          path: "/schedule",
+          path: "https://calendar.app.google/TEfaKdgKeT3nU23c9",
           label: "Schedule",
         },
       ],
@@ -71,6 +74,7 @@ const ImportanceLinks = ({ color, linkHoverColor }) => {
               {links.map(({ id, label, path }) => (
                 <li key={id} className="mt-2.5">
                   <Link
+                 
                     href={path}
                     className={cn(
                       `font-semibold text-base hover:text-primary-foreground transition-all duration-500`,

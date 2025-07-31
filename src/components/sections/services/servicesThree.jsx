@@ -17,7 +17,7 @@ const ServiceThree = () => {
         <div className="lg:pt-7.5 pt-2">
           <div className="grid xl:grid-cols-3 gap-10 lg:grid-cols-3 sm:grid-cols-2">
             {servicesDataThree.map(
-              ({ id, description, icon, service_name, slug }) => {
+              ({ id, description, icon, service_name, url, metaDescription }) => {
                 return (
                   <SlideUp key={id} id={id}>
                     <div className="lg:pt-15 pt-7.5 text-center lg:text-start group">
@@ -31,12 +31,12 @@ const ServiceThree = () => {
                         </div>
                       </div>
                       <Link
-                        href={`/${slug}`}
+                        href={`/services/${url}`}
                         className="text-xl font-extrabold text-muted-foreground leading-[140%] multiline-hover"
                       >
                         {service_name}
                       </Link>
-                      <p className="pt-5">{description}</p>
+                      <p className="pt-5">{metaDescription}</p>
                     </div>
                   </SlideUp>
                 );

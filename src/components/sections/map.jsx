@@ -1,17 +1,14 @@
 "use client";
-import Image from "next/image";
+import { BsFillTelephoneForwardFill } from "react-icons/bs";
+import { FaHouseChimney } from "react-icons/fa6";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import content_icon from "../../../public/images/shapes/content-writing-icon.png";
-import team_icon from "../../../public/images/shapes/dynamic-team-icon.png";
-import skills_icon from "../../../public/images/shapes/skills-icon.png";
-import SlideUp from "../animations/slideUp";
 import { Button } from "../ui/button";
 import Highlight from "../ui/highlight";
-import SocialIcons from "../ui/socialIcons";
 import Title from "../ui/title";
-// import { MapContainer, TileLayer, Marker, Popup } from 'https://cdn.esm.sh/react-leaflet'
+
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import SocialIcons from "../ui/socialIcons";
 
 const ContactMap = () => {
   const icon = L.icon({
@@ -52,7 +49,6 @@ const ContactMap = () => {
                       <h5 className="text-lg font-bold text-muted-foreground">
                         MRZ Tech UK
                       </h5>
-
                       <p>
                         23 Church Street, Manchester, Greater Manchester, UK
                       </p>
@@ -61,29 +57,56 @@ const ContactMap = () => {
                 </Marker>
               </MapContainer>
             </div>
-            <div className="lg:pt-[46px] pt-4 flex lg:flex-row flex-col justify-between max-w-[1320px] mx-auto pb-12.5 px-3 lg:px-0">
-              <Card
-                icon={team_icon}
-                title={"Address"}
-                isIcon={false}
-                desc={"23 Church Street, Manchester, Greater Manchester, UK"}
-              />
+            <div className="flex flex-wrap justify-between  mx-60 py-20">
+              <div className="space-y-10">
+                <FaHouseChimney className="text-7xl" />
+                <div className="space-y-5">
+                  <div className="space-y-3">
+                    <h2 className="font-bold text-xl">Address UK</h2>
+                    <p>
+                      23 Church Street, Manchester, <br /> Greater Manchester,
+                      UK
+                    </p>
+                  </div>
+                  <div className="space-y-3">
+                    <h2 className="font-bold text-xl">Head Quater</h2>
+                    <p>
+                      Level: 1&2, House: 11/A2, Road-41, <br /> Gulshan-2,
+                      Dhaka-1212, Bangladesh
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-              <Card
-                icon={skills_icon}
-                title={"Contact"}
-                isIcon={false}
-                desc={`                       
-                             <p> <span class='font-semibold'>Email:</span> <a href={"mailto:info@mrztech.com"} class='relative hover-underline after:h-[1px] after:bg-muted'> info@mrztech.com</a> </p>
-                             <p> <span class='font-semibold'>Call us:</span> <a href={"tal:+8801991198312"} class='relative hover-underline after:h-[1px] after:bg-muted'>+8801991-198312</Link> </p>
-                             `}
-              />
-              <Card
-                icon={content_icon}
-                title={"Social"}
-                desc={<SocialIcons prantBorder={"text-2xl mt-[22px]"} />}
-                isSocalIcon={true}
-              />
+              <div className="space-y-10">
+                <BsFillTelephoneForwardFill className="text-7xl" />
+                <div className="space-y-3">
+                  <h2 className="font-bold text-xl">Contact</h2>
+                  <p>
+                    <span className="font-bold">Phone: </span>
+                    <a
+                      href="tel:+880 1991-198312"
+                      className="hover:text-[#0963DD]"
+                    >
+                      +880 1991-198312
+                    </a>
+                  </p>
+                  <p>
+                    <span className="font-bold">Email: </span>
+                    <a
+                      href="mailto:info@mrztech.com"
+                      className="hover:text-[#0963DD]"
+                    >
+                      info@mrztech.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              <div className="my-25 space-y-5">
+                <h2 className="text-xl font-bold">Social</h2>
+                <SocialIcons />
+              </div>
             </div>
           </div>
         </div>
@@ -93,27 +116,3 @@ const ContactMap = () => {
 };
 
 export default ContactMap;
-
-// --------------- Card
-const Card = ({ id, icon, title, desc, isSocalIcon }) => {
-  return (
-    <SlideUp>
-      <div className="flex items-center gap-7 pt-7 lg:pt-0">
-        <div className="xl:min-w-[75px] min-w-16 max-w-16 xl:min-h-[75px] min-h-16 max-h-16 p-3 xl:p-0 shadow-[0px_4px_20px_0px_rgba(0,31,63,0.1019607843)] bg-white rounded-lg flex justify-center items-center">
-          <Image src={icon} alt="icon" />
-        </div>
-        <div className="lg:max-w-[450px]">
-          <Title size={"2xl"}>{title}</Title>
-          {isSocalIcon ? (
-            <div>{desc}</div>
-          ) : (
-            <p
-              className="max-w-[311px] "
-              dangerouslySetInnerHTML={{ __html: desc }}
-            />
-          )}
-        </div>
-      </div>
-    </SlideUp>
-  );
-};

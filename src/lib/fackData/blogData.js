@@ -3,7 +3,7 @@ export const blogData = [
     id: 1,
     title: "What is Custom Web Design? Understanding the Benefits & Process",
     slug: "what-is-custom-web-design",
-    date: "01 August 2025",
+    date: "12 July 2025",
     author: {
       author_img: "",
       author_name: "by John Doe",
@@ -68,20 +68,20 @@ export const blogData = [
 </section>
 `,
     },
-    category: ["Social Media Marketing"],
+    category: ["Software Development"],
     thumb: "/images/blog/Why MRZ Tech.jpg",
   },
   {
     id: 2,
     title: " Web Design Impacts Content Marketing | MRZ Tech",
     slug: "web-design-impacts-content-marketing",
-    date: "01 August 2025",
+    date: "25 July 2025",
     author: {
       author_img: "",
       author_name: "by John Doe",
       social_link: [""],
-      // metaDescription:
-      //   "Discover how web design significantly influences your content marketing efforts. Learn effective strategies and tips from MRZ Tech to enhance your online visibility and engagement.",
+      metaDescription:
+        "Discover how web design significantly influences your content marketing efforts. Learn effective strategies and tips from MRZ Tech to enhance your online visibility and engagement.",
       description: `<section style="max-width: 1080px; margin: 0 auto; padding: 40px 20px; font-family: Arial, sans-serif; line-height: 1.7; color: #333;">
   <h1 style="font-size: 32px; font-weight: bold; margin-bottom: 20px; color: #333;">How Web Design Impacts Content Marketing</h1>
   <p style="margin-bottom: 16px;">
@@ -143,7 +143,7 @@ export const blogData = [
 
 `,
     },
-    category: ["Marketing Strategy"],
+    category: ["Web Development"],
     thumb: "/images/blog/What is Custom Web Design.jpg",
   },
   {
@@ -266,7 +266,7 @@ export const blogData = [
 
 `,
     },
-    category: ["Social Media"],
+    category: ["Product Design"],
     thumb: "/images/blog/What is Custom Web Design.jpg",
   },
   // {

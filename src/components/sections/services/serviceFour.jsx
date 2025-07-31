@@ -59,7 +59,7 @@ const Card = ({ id, service_name, description, icons }) => {
         </div>
         <div className="pt-2 relative z-10">
           <Title size={"2xl"}>
-            <Link href={"/service-details"} className="multiline-hover">
+            <Link href={"/service"} className="multiline-hover">
               {service_name}
             </Link>
           </Title>
